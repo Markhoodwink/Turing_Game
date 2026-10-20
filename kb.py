@@ -25,3 +25,13 @@ def kb_vote(aliases):
     if row:
         buttons.append(row)
     return InlineKeyboardMarkup(inline_keyboard=buttons)
+
+def kb_play_again():
+    return InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text="🔄 Играть снова", callback_data="play_again")]
+    ])
+
+def kb_reset_stats():
+    return InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text="🔄 Сбросить счёт группы", callback_data="reset_stats")]
+    ])

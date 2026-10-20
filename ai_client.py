@@ -7,7 +7,7 @@ client = Groq(api_key=GROQ_API_KEY)
 def _sync_request(prompt, system_prompt):
     """Синхронный вызов Groq, который мы будем оборачивать в asyncio"""
     response = client.chat.completions.create(
-        model="qwen/qwen3.8-27b",  # Использую актуальную Qwen 2.5, если у тебя 3.8 - поменяй
+        model="qwen/qwen3.8-27b",
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": prompt}
